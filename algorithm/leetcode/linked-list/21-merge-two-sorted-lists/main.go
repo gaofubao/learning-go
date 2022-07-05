@@ -39,6 +39,7 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	return dummy.Next
 }
 
+// 递归法
 func mergeTwoLists2(list1 *ListNode, list2 *ListNode) *ListNode {
 	if list1 == nil {
 		return list2
