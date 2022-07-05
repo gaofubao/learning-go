@@ -15,28 +15,28 @@ type ListNode struct {
 // 迭代法
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	dummy := &ListNode{}
-	head := dummy
+	curr := dummy
 
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {
-			dummy.Next = list1
+			curr.Next = list1
 			list1 = list1.Next
 		} else {
-			dummy.Next = list2
+			curr.Next = list2
 			list2 = list2.Next
 		}
-		dummy = dummy.Next
+		curr = curr.Next
 	}
 
 	if list1 != nil {
-		dummy.Next = list1
+		curr.Next = list1
 	}
 
 	if list2 != nil {
-		dummy.Next = list2
+		curr.Next = list2
 	}
 
-	return head.Next
+	return dummy.Next
 }
 
 func mergeTwoLists2(list1 *ListNode, list2 *ListNode) *ListNode {
