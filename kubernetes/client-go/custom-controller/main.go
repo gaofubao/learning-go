@@ -1,17 +1,21 @@
 package main
 
 import (
-	"github.com/gaofubao/learning-go/kubernetes/client-go/custom-controller/pkg"
+	"custom-controller/pkg"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
+	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 )
 
 func main() {
 	// 加载配置文件
-	config, err := clientcmd.BuildConfigFromFlags("", "./kubernetes/client-go/custom-controller/config.yaml")
+	config, err := clientcmd.BuildConfigFromFlags("", "config.yaml")
 	if err != nil {
-		panic(err)
+		config, err = rest.InClusterConfig()
+		if err != nil {
+			panic(err)
+		}
 	}
 
 	// 初始化客户端
