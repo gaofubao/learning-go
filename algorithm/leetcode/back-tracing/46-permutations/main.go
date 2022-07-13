@@ -15,7 +15,7 @@ func permute(nums []int) [][]int {
 
 	used = make(map[int]bool)
 	backtrack = func() {
-		// 结束条件
+		// 前置位置，只要叶子节点的值
 		if len(track) == len(nums) {
 			temp := make([]int, len(track))
 			copy(temp, track)
@@ -30,7 +30,7 @@ func permute(nums []int) [][]int {
 			// 做选择
 			used[num] = true
 			track = append(track, num)
-			// 进入下一层决策树
+			// 递归，进入下一层决策树
 			backtrack()
 			// 撤销选择
 			used[num] = false
