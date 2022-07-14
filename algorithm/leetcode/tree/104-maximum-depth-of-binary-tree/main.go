@@ -24,14 +24,12 @@ func maxDepth(root *TreeNode) int {
 
 	traverse = func(node *TreeNode) {
 		if node == nil {
+			res = int(math.Max(float64(res), float64(depth)))
 			return
 		}
 
 		// 前序位置
 		depth++
-		if node.Left == nil && node.Right == nil {
-			res = int(math.Max(float64(res), float64(depth)))
-		}
 		traverse(node.Left)
 		traverse(node.Right)
 		// 后序位置
@@ -39,7 +37,7 @@ func maxDepth(root *TreeNode) int {
 	}
 
 	traverse(root)
-	return depth
+	return res
 }
 
 // 方法二：分解问题，通过子树的最大深度推导出原树的最大深度
