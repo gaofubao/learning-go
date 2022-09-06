@@ -1,15 +1,15 @@
 apiVersion: appcontroller.example.com/v1
 kind: App
 metadata:
-  name: app-demo
+  name: app-demo01
 spec:
   deployment:
-    name: app-deployment-demo
+    name: app-deployment-demo01
     replicas: 1
     image: nginx:latest
   service:
-    name: app-service-demo
+    name: app-service-demo01
   ingress:
-    name: app-ingress-demo
+    name: app-ingress-demo01
 status:
   availableReplicas: 0

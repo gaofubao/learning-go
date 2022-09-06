@@ -54,6 +54,7 @@ func traverse(root *TreeNode) {
 - 后序遍历: 自底向上，例如与子树相关的数据 [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
 
 ### 递归与问题分解
+[](226-invert-binary-tree)
 
 ### 层序遍历
 [102. 二叉树的层序遍历](102-binary-tree-level-order-traversal)

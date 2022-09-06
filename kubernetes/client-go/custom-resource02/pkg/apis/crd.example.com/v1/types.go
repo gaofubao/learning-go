@@ -17,7 +17,7 @@ type FooStatus struct {
 	// INSERT ADDITIONAL STATUS FIELDS -- observed state of cluster
 }
 
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/enum/runtime.Object
 // +kubebuilder:subresource:status
 
 // Foo is the Schema for the foos API
@@ -30,7 +30,7 @@ type Foo struct {
 	Status FooStatus `json:"status,omitempty"`
 }
 
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/enum/runtime.Object
 
 // FooList contains a list of Foo
 type FooList struct {

@@ -13,7 +13,7 @@ type-scaffold --kind Foo
 
 ## 生成 deepcopy
 ```shell
-controller-gen object paths=./pkg/apis/crd.example.com/v1/types.go
+controller-gen object paths=./enum/apis/crd.example.com/v1/types.go
 ```
 
 ## 生成 crd

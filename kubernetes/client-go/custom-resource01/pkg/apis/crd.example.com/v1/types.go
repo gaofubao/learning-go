@@ -5,7 +5,7 @@ import (
 )
 
 // +genclient
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/enum/runtime.Object
 
 // Foo is a specification for a Foo resource
 type Foo struct {
@@ -27,7 +27,7 @@ type FooStatus struct {
 	AvailableReplicas int32 `json:"availableReplicas"`
 }
 
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/enum/runtime.Object
 
 // FooList is a list of Foo resources
 type FooList struct {
